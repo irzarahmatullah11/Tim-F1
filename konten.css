@@ -1,0 +1,163 @@
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+.hero {
+    background: url('https://www.cnet.com/a/img/resize/5d81b7af62f40a5bf48543beef254e444cb6c62c/hub/2021/07/15/e87723b0-e697-4841-b803-c1602c235986/image2.jpg?auto=webp&width=1200') no-repeat center center/cover;
+    height: 400px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: heroAnimation 10s ease-in-out infinite alternate;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+.hero .cta {
+    background: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero .cta:hover {
+    background: #ff4500;
+    transform: scale(1.1);
+}
+
+.features {
+    padding: 20px 0;
+    background: #f4f4f4;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features .feature {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features .feature img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    transition: transform 0.3s;
+}
+
+.features .feature h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.features .feature p {
+    margin: 10px 0;
+}
+
+.features .feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.features .feature:hover img {
+    transform: scale(1.1);
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes heroAnimation {
+    0% {
+        background-position: center;
+    }
+    100% {
+        background-position: top;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
